@@ -1,7 +1,8 @@
 <?php 
 /* 
  * Replace URL Wordpress
- * v1.0.0
+ * Autor: Adam Macias <adammacias.com.br>
+ * Versão: 1.0.0
  * 
 */
 
