@@ -1,6 +1,6 @@
-# Replace URL Wordpress #
+# Replace URL WordPress #
 
-Quando migramos um site em Wordpress do ambiente de desenvolvimento para o de produção ou vice-versa, sabemos que é um pouco chato alterar os URL's no banco de dados do Wordpress usando plugins ou até mesmo SQL. Este script foi criado com intuído de acabar de vez com essa chatisse com apenas **um clique**.
+Quando migramos um site em WordPress do ambiente de desenvolvimento para o de produção ou vice-versa, sabemos que é um pouco chato alterar os URL's no banco de dados do WordPress usando plugins ou até mesmo SQL. Este script foi criado com intuíto de acabar de vez com essa chatisse utilizando apenas **um clique**.
 
 ## Como Usar ##
 
@@ -16,6 +16,9 @@ Quando migramos um site em Wordpress do ambiente de desenvolvimento para o de pr
 
 ## Changlog ##
 
+#### v1.0.1 - 25/07/2013 ####
+* Incluído substituição de URL's na tabela **postmeta**.
+
 #### v1.0.0 - 23/07/2013 ####
 * Commit inicial.
 
@@ -23,4 +26,4 @@ Quando migramos um site em Wordpress do ambiente de desenvolvimento para o de pr
 
 Caso queira contribuir, basta usar o botão **Fork**, criar um *Branch*, arrumar o código e enviá-lo com um **Pull Request**.
 
-Reporte bugs ou faça sugestões utilizando o [Issues/Fórum](https://github.com/adammacias/Replace-URL-Wordpress/issues).
+Reporte bugs ou faça sugestões utilizando o [Issues/Fórum](https://github.com/adammacias/Replace-URL-WordPress/issues).
