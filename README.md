@@ -18,6 +18,7 @@ Quando migramos um site em WordPress do ambiente de desenvolvimento para o de pr
 
 #### v1.0.1 - 25/07/2013 ####
 * Incluído substituição de URL's na tabela **postmeta**.
+* Incluído substituição de URL's na tabela **options**.
 
 #### v1.0.0 - 23/07/2013 ####
 * Commit inicial.

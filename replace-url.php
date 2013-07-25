@@ -47,6 +47,7 @@
 			$option_site 	= $_POST["option_site"];	
 			$option_home 	= $_POST["option_home"];
 			$option_posts 	= $_POST["option_posts"];
+			$option_options	= $_POST["option_options"];			
 	
 				if($option_site) {
 					$sql_site = update_option('siteurl', "$urlNew" );
@@ -63,10 +64,16 @@
 				if($option_posts) {
 					$sql_posts = $wpdb->query(" UPDATE $wpdb->posts SET post_content = replace(post_content,'$urlCurrent','$urlNew'); ");
 					$sql_postsGuid = $wpdb->query(" UPDATE $wpdb->posts SET guid = replace(guid,'$urlCurrent','$urlNew'); " );
-					$sql_postsMetas = $wpdb->query(" UPDATE $wpdb->posts SET meta_value = replace(meta_value,'$urlCurrent','$urlNew'); " );
+					$sql_postsMetas = $wpdb->query(" UPDATE $wpdb->postmeta SET meta_value = replace(meta_value,'$urlCurrent','$urlNew'); " );
 					
-					if(@$sql_posts && @$sql_postsGuid || $urlCurrent==$urlNew) { echo '<div class="alert alert-success"> <strong>URL\'s Posts</strong> foram alterados com sucesso! :) </div> ';}
+					if(@$sql_posts && @$sql_postsGuid && @$sql_postsMetas || $urlCurrent==$urlNew) { echo '<div class="alert alert-success"> <strong>URL\'s Posts</strong> foram alterados com sucesso! :) </div> ';}
 					else { echo '<div class="alert alert-error"> Desculpe, ocorreu um erro ao tentar alterar os <strong>URL\'s Posts</strong>! :( </div> ';}
+				}
+				if($option_options) {
+					$sql_options = $wpdb->query(" UPDATE $wpdb->options SET option_value = replace(option_value,'$urlCurrent','$urlNew'); ");
+					
+					if(@$sql_options || $urlCurrent==$urlNew) { echo '<div class="alert alert-success"> <strong>URL\'s Opções</strong> foram alterados com sucesso! :) </div> ';}
+					else { echo '<div class="alert alert-error"> Desculpe, ocorreu um erro ao tentar alterar os <strong>URL\'s Opções</strong>! :( </div> ';}
 				}
 			
 		endif; 
@@ -98,6 +105,7 @@
 		      <label class="checkbox"> <input type="checkbox" name="option_site" value="1" checked> Alterar URL Site </label>
 		      <label class="checkbox"> <input type="checkbox" name="option_home" value="1" checked> Alterar URL Home Page </label>
 		      <label class="checkbox"> <input type="checkbox" name="option_posts" value="1" checked> Alterar URL's Posts (Conteúdo, Slug's e Metas) </label>
+		      <label class="checkbox"> <input type="checkbox" name="option_options" value="1" checked> Alterar URL's (Opções) </label>
 		      <br>
 		      <button type="submit" class="btn btn-primary">Salvar</button>
 		    </div>
