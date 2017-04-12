@@ -1,6 +1,6 @@
 # Replace URL WordPress #
 
-Quando migramos um site WordPress do ambiente de desenvolvimento (localhost) para o de produção ou vice-versa, sabemos que é um pouco chato alterar os URL's no banco de dados do WordPress usando plugins ou até mesmo SQL manual. Este script foi criado com intuíto de acabar de vez com essa chatisse utilizando apenas **um clique**. 
+Quando migramos um site WordPress do ambiente de desenvolvimento (local) para o de produção ou vice-versa, sabemos que é um pouco chato alterar os URL's no banco de dados do WordPress usando plugins ou até mesmo SQL manual. Este script foi criado com intuíto de acabar de vez com essa chatisse utilizando apenas **um clique**. 
 
 ## Como Usar ##
 
